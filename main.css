@@ -1,0 +1,172 @@
+#field_container, #solve_overlay, #game_overlay {
+  max-width: 580px;
+}
+
+.tile {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.Soil.t1 {
+    background: url("img/soil1.png");
+}
+
+.Soil.t2 {
+    background: url("img/soil2.png");
+}
+
+.Soil.t3 {
+    background: url("img/soil3.png");
+}
+
+.Rock {
+    background: url("img/rock.png");
+}
+
+.Marked_soil {
+    background: url("img/marked_soil.png");
+}
+
+.Marked_root {
+    background: url("img/marked_root.png");
+}
+
+.Plant[data-y="4"][data-x="4"]:before {
+    content: "";
+    position: absolute;
+    width: 192px;
+    height: 192px;
+    background: url("img/plant.png");
+}
+
+.Root.t001, .Root.t00m1, .Root.t0m10, .Root.t010, .Root.t0m10m1,
+.Root.tm10m10, .Root.t0101, .Root.t1010 {
+    background: url("img/root.png");
+}
+
+.Root.t0m10, .Root.t010, .Root.t01m10, .Root.tm10m10, .Root.t1010,
+.Root.tm1001, .Root.tm1001.thinning, .Root.t0m110, .Root.t1001.end {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.Root.tm100m1, .Root.t0110, .Root.tm100m1.thinning, .Root.t0110.thinning,
+.Root.t0m110.end, .Root.t0m10m1.end, .Root.t0101.thinning, .Root.t0m1m10.end {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.Root.t01m10, .Root.t01m10.thinning, .Root.t100m1, .Root.t100m1.thinning,
+.Root.t1010.thinning, .Root.tm100m1.end, .Root.tm1001.end, .Root.tm10m10.end {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+.Root.t0110.end, .Root.t01m10.end {
+    -webkit-transform: inherit;
+    -moz-transform: inherit;
+    -o-transform: inherit;
+    -ms-transform: inherit;
+    transform: inherit;
+}
+
+.Root.t100m1.end {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.Root.t01m10, .Root.tm100m1, .Root.t0m1m10, .Root.t1001,
+.Root.tm1001, .Root.t100m1, .Root.t100m1, .Root.t0110, .Root.t0m110 {
+    background: url("img/rootTurn.png");
+}
+
+.Root.t01m10.thinning, .Root.tm100m1.thinning, .Root.t0m1m10.thinning,
+.Root.t1001.thinning, .Root.tm1001.thinning, .Root.t100m1.thinning,
+.Root.t100m1.thinning, .Root.t0110.thinning {
+    background: url("img/rootThinningTurn.png");
+}
+
+.Root.t01m10.thinning, .Root.t1001.thinning, .Root.tm100m1.thinning,
+.Root.t0m110.thinning {
+    background: url("img/rootThinningTurn2.png");
+}
+
+.Root.t0101.thinning, .Root.tm10m10.thinning, .Root.t1010.thinning,
+.Root.t0m10m1.thinning {
+    background: url("img/rootThinning.png");
+}
+
+.Root.thin {
+    background: url("img/rootThin.png");
+}
+
+.Root.t01m10.thin, .Root.tm100m1.thin, .Root.t0m1m10.thin, .Root.t1001.thin,
+.Root.tm1001.thin, .Root.t100m1.thin, .Root.t100m1.thin, .Root.t0110.thin, .Root.t0m110.thin {
+    background: url("img/rootThinTurn.png");
+}
+
+.Root.t1010.end, .Root.t0m110.end, .Root.t0110.end, .Root.t0101.end,
+.Root.t0m10m1.end, .Root.t01m10.end, .Root.t1001.end, .Root.tm10m10.end,
+.Root.t100m1.end, .Root.tm1001.end, .Root.tm100m1.end, .Root.t0m1m10.end {
+    background: url("img/rootEnd.png");
+}
+
+#refresh, #undo {
+    margin-top: 20px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid;
+    width: 70px;
+    -webkit-user-select: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#solve_overlay, #game_overlay {
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+}
+
+#game_overlay {
+    z-index: 2;
+}
+
+.tile.grass1 {
+    background: url("img/grass1.png");
+}
+
+.tile.grass2 {
+    background: url("img/grass2.png");
+}
+
+.tile.grass3 {
+    background: url("img/grass3.png");
+}
+
+.tile.game.plant {
+    background: none;
+    pointer-events: none;
+}
+
+.tile.revealed {
+    background: none;
+}
+
+#victory {
+    display: none;
+}
