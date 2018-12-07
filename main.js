@@ -106,6 +106,9 @@ $(function() {
     });
 
     $(field.game_overlay).on('click', '.tile', function () {
+        if ($(this).hasClass("revealed"))
+            return;
+
         var y = $(this).data("y");
         var x = $(this).data("x");
 
@@ -131,8 +134,10 @@ $(function() {
             }
         }
 
+        around_tiles = around_tiles.sort(() => .5 - Math.random());
+
         if (around_tiles.length > 8)
-            around_tiles = around_tiles.slice(0, 8);
+            around_tiles = around_tiles.slice(0, 8)
 
         for (var i = 0; i < around_tiles.length; i++) {
             if (window.game_field[around_tiles[i][0]][around_tiles[i][1]].constructor.name === "Soil") {
