@@ -58,7 +58,8 @@ $(function() {
         $("#roots_number span").html(window.field.roots_number);
     }
 
-    window.start_game = function (args) {
+    window.start_game = function () {
+        args = window.getRoots();
         window.field = new Field(args);
         console.log(window.field.roots_number);
         window.game_field = window.prepare(false);
@@ -66,6 +67,11 @@ $(function() {
         window.add_game_overlay();
     };
 
+    window.getRoots = function () {
+        return $("#roots_number").val();
+    };
+
+    var args = [];
     window.start_game();
 
     $("#refresh").click(function () {

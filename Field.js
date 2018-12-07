@@ -1,9 +1,11 @@
 class Field {
 
-    constructor() {
+    constructor(args) {
+        console.log(args);
         this.size = 12;
         this.max_lenght = 9;
-        this.roots_number = 30 + Math.floor((Math.random() * 30) + 1);
+        // this.roots_number = 30 + Math.floor((Math.random() * 30) + 1);
+        this.roots_number = parseInt(args);
         this.container = "#field";
         this.solve_overlay = "#solve_overlay";
         this.game_overlay = "#game_overlay";
